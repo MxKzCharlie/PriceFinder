@@ -22,3 +22,5 @@ function Card({url, urlImg, precio, titulo, logo}) {
 }
 
 export default Card;
+
+//https://mxcharlie.pythonanywhere.com/get/
