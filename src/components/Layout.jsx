@@ -1,9 +1,21 @@
 import Header from './Header';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 function Layout() {
     const [home, setHome] = useState(true)
     const [loading, setLoading] = useState(false)
+
+    useEffect(() => {
+        fetch('https://mxcharlie.pythonanywhere.com/start/', {
+            method: 'GET',
+            credentials: 'include',
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.info)
+            })
+    },[])
 
     if(loading){
         return (
