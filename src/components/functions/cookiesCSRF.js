@@ -1,6 +1,5 @@
-function getTokenCSRF(){
+function getTokenCSRF(name){
     let cookieValue = null;
-    let name = 'csrftoken';
 
     if (document.cookie && document.cookie !== '') {
         const cookies = document.cookie.split(';');
