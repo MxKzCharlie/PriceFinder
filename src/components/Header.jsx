@@ -1,5 +1,5 @@
 import lupa from '../assets/lupa.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import fetchCustom from './functions/fetchCustom';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,6 +17,7 @@ function Header({setLoading, setHome}) {
     const handleChange = (e) => {
         if (e.target.name === 'quantity'){
             setValue(e.target.value);
+            console.log(value)
         }
         setDataState({
             ...dataState,
