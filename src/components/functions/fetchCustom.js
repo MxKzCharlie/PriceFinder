@@ -1,7 +1,7 @@
 import getTokenCSRF from "./cookiesCSRF";
 
 async function fetchCustom(method, endpoint, body){
-    const csrftoken = getTokenCSRF('csrftoken');
+    const csrftoken = 'Q14uxEu4wm8ZXHwAdXnC1FcAMgsiTMin'
     console.log(csrftoken);
 
     const response = await fetch(`https://mxcharlie.pythonanywhere.com/${endpoint}`, {
